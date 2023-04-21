@@ -22,7 +22,7 @@
     {% endif %}
 
     <meta property="og:url" content="{{page.url | absolute_url}}" />
-    <meta property=“og:image” content="https://europeblog.lewismarshall.dev/assets/images/og.png" />
+    <meta property="og:image" content="https://europeblog.lewismarshall.dev/assets/images/og.png">
 
 
     {% if page.title %}
@@ -57,6 +57,7 @@
     {% endif %}
     <meta name="twitter:url" content="{{page.url | absolute_url}}" />
     <meta name="twitter:description" content="{% if page.description %}{{page.description | strip_html | strip | strip_newlines | truncate: 200}}{% else %}{{page.content | markdownify | strip_html | strip | strip_newlines | truncate: 200}}{% endif %}" />
+    <meta name="twitter:image" content="https://europeblog.lewismarshall.dev/assets/images/og.png">
 
     <!-- preload cover images /-->
     {% for post in paginator.posts %}
