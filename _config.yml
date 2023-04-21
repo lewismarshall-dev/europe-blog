@@ -5,7 +5,7 @@ about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 author: 'Lewis Marshall'
 
 # Paths
-baseurl: ''
+baseurl: 'https://lewismarshall-dev.github.io/repositoryname'
 url: ''
 
 # Options
