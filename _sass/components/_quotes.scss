@@ -1,0 +1,6 @@
+.site-quotes { margin: 40px 0 0; padding: 0 20px; text-align: center;
+    .random-quote { margin: 0; font-size: 20px; line-height: 28px; font-style: italic; color: var(--grey-222);
+        &.fade-out { @include animation(fadeOut, .3s, ease, 0s, 1, forwards); }
+        &.fade-in { @include animation(fadeIn, .3s, ease, 0s, 1, forwards); }
+    }
+}

@@ -1,0 +1,15 @@
+{% assign a = include.src | split: "/d/" %}
+{% assign b = a[1] | split: "/view?" %}
+
+{% capture gDriveUrl %}
+  https://drive.google.com/uc?export=view&id={{ b[0] }}
+{% endcapture %}
+
+{% if include.caption and include.caption != "" %}
+  <figure>
+    <img src="{{gDriveUrl}}" alt="" />
+    <figcaption>{{ include.caaption }}</figcaption>
+  </figure>
+{% else %}
+  <img src="{{gDriveUrl}}" alt="{{include.alt}}" />
+{% endif %}

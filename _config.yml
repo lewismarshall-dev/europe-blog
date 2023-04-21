@@ -1,0 +1,92 @@
+# General
+title: 'Do as the Romans Do'
+description: 'Chronicles of our euro continent conquest'
+about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+author: 'Lewis Marshall'
+
+# Paths
+baseurl: ''
+url: ''
+
+# Options
+darkMode: true
+showTags: true
+showSearch: true
+showSharePost: true
+showFavIcon: true
+showComments: false
+showQuotes: false
+showAbout: true
+showMoreStories: true
+showCookieBanner: false
+moreStoriesLimit: 4
+useSingleAuthor: false
+useExternalContactForm: false
+useAnalytics: false
+
+# Third Party / Social
+facebook:
+  active: false
+  url: 'https://facebook.com/'
+twitter:
+  active: false
+  url: 'https://twitter.com/'
+instagram:
+  active: false
+  url: 'https://instagram.com/'
+email:
+  active: false
+  address: 'your@email.com'
+
+formspree: https://formspree.io/f/xxxxxxxx
+googleAnalyticsTrackingCode: UA-XXXXXXX-2
+disqusID: 'disqusID'
+twitterHandle: 'twitterHandle'
+
+# Collections
+collections:
+  tag:
+    output: true
+
+defaults:
+  - scope:
+      path: ''
+      type: 'posts'
+    values:
+      layout: 'post'
+      comments: 'true'
+  - scope:
+      path: ''
+      type: 'pages'
+    values:
+      layout: 'page'
+  - scope:
+      path: ''
+      type: 'tag'
+    values:
+      layout: 'tag'
+  - scope:
+      path: ''
+    values:
+      layout: 'default'
+
+# Permalinks
+permalink: /:title/
+
+# Includes
+include: ['_pages']
+
+# Pagination
+paginate: 4
+paginate_path: '/age-:num/'
+
+# Assets
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate

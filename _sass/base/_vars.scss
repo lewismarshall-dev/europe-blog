@@ -1,0 +1,37 @@
+:root,
+[data-theme='light'] {
+  --max-post-width: 83.33333%;
+  --max-post-listing-width: 1080px;
+
+  --body-bg: #fff;
+
+  --form-success-bg: #d0f1cc;
+  --form-success-text: #597755;
+  --form-error-bg: #f1cccc;
+  --form-error-text: #775555;
+
+  --grey-111: #111;
+  --grey-222: #222;
+  --grey-555: #555;
+  --grey-aaa: #aaa;
+  --grey-ddd: #ddd;
+  --grey-fc: #fcfcfc;
+  --grey-fa: #fafafa;
+}
+
+[data-theme='dark'] {
+  --body-bg: #050505;
+
+  --form-success-bg: #d0f1cc;
+  --form-success-text: #597755;
+  --form-error-bg: #f1cccc;
+  --form-error-text: #775555;
+
+  --grey-111: #444;
+  --grey-222: #ddd;
+  --grey-555: #ccc;
+  --grey-aaa: #777;
+  --grey-ddd: #666;
+  --grey-fc: #fcfcfc;
+  --grey-fa: #151515;
+}

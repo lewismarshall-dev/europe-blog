@@ -1,0 +1,9 @@
+<article class="post-compact" role="article">
+  <a
+    href="{{post.url | absolute_url}}"
+    style="background-image: url({{post.cover}})"
+    loading="eager">
+    <h2 class="post-title">{{ post.title }}</h2>
+    {% include components/postDate.html %}
+  </a>
+</article>

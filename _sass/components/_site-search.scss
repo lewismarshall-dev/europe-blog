@@ -1,0 +1,97 @@
+.site-search {
+  .site-search-icon {
+    width: 25px;
+    height: 25px;
+    fill: currentColor;
+    color: var(--grey-222);
+    cursor: pointer;
+  }
+  .site-search-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: -5px;
+    right: -300px;
+    padding: 0 10px;
+    background: var(--grey-fa);
+    border-radius: 30px;
+    @include transition(all 0.2s ease);
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      right: 50px;
+    }
+    & > div {
+      display: inline-grid;
+      max-width: 400px;
+      &:after {
+        content: attr(data-value);
+        visibility: hidden;
+        white-space: pre-wrap;
+        height: 0;
+      }
+      #site-search-input {
+        max-width: 400px;
+        height: 35px;
+        font-family: 'PT Serif', serif;
+        color: var(--grey-222);
+        font-size: 15px;
+        background: transparent;
+        border: none;
+        outline: none;
+        @include placeholder() {
+          color: var(--grey-aaa);
+          font-family: 'PT Serif', serif;
+          font-size: 15px;
+        }
+      }
+    }
+    #site-search-results-container {
+      position: absolute;
+      width: 100%;
+      top: 40px;
+      left: 0;
+      background: var(--grey-fa);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      &:empty {
+        display: none;
+      }
+      .no-results {
+        padding: 10px 15px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      li {
+        border-top: 1px solid var(--grey-ddd);
+        text-align: left;
+        &:first-of-type {
+          border-top: none;
+          a {
+            border-radius: 5px 5px 0 0;
+          }
+        }
+        &:last-of-type a {
+          border-radius: 0 0 5px 5px;
+        }
+        a {
+          display: block;
+          padding: 10px 15px;
+          text-decoration: none;
+          color: var(--grey-555);
+          font-size: 16px;
+          line-height: 24px;
+          background: transparent;
+          @include transition(background 0.1s ease);
+          &:hover {
+            background: var(--grey-ddd);
+          }
+        }
+      }
+    }
+  }
+}

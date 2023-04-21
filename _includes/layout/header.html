@@ -1,0 +1,26 @@
+<header class="site-header {% if page.layout == 'post' %}compact{% endif %}">
+  <a class="site-header-wrapper" href="{{'/' | absolute_url}}">
+    <span class="site-logo">
+      <img
+        src={{"/assets/images/logo.png" | absolute_url}}
+        width="50"
+        height="50"
+        alt="Logo" />
+    </span>
+
+    {% if page.layout != "post" %}
+      <span class="site-title">{{ site.title }}</span>
+    {% endif %}
+  </a>
+
+  <div class="site-header-actions {% if page.layout == 'post' %}inactive{% endif %}">
+    {% if site.showSearch and page.layout != "post" %}
+      {% include components/siteSearch.html %}
+    {% endif %}
+    {% comment %}
+    {% if site.darkMode %}
+    {% include partials/themeChanger.html %}
+    {% endif %}
+    {% endcomment %}
+  </div>
+</header>

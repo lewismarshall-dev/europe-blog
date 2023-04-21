@@ -1,0 +1,10 @@
+<div class="site-search" role="search">
+    <svg class="site-search-icon" width="50" height="50"><use href={{"/assets/images/other-icons.svg#search" | absolute_url}}></use></svg>
+    <div class="site-search-wrapper">
+        <div>
+            <label for="site-search-input" class="hidden">Search</label>
+            <input type="text" name="site-search" id="site-search-input" onInput="this.parentNode.dataset.value = this.value" placeholder="Type here to search..." />
+        </div>
+        <ul id="site-search-results-container"></ul>
+    </div>
+</div>

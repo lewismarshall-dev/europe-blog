@@ -1,0 +1,83 @@
+<article class="post" role="article">
+  {% assign post = page %}
+
+  <div class="cover-image" style="background-image: url({{post.cover}})">
+    <div>
+      <div class="post-meta">
+        {% include components/postDate.html %}
+      </div>
+      <h1 class="post-title">{{ post.title }}</h1>
+    </div>
+    <a href="#startReading" class="post-start-reading">
+      <svg width="40" height="40">
+        <use href={{"/assets/images/other-icons.svg#arrow-down" | absolute_url}}></use>
+      </svg>
+    </a>
+  </div>
+
+  <div class="post-content" id="startReading">
+    {{ post.content | markdownify }}
+  </div>
+
+  <div class="post-footer">
+    {% if site.showTags and post.tags %}
+      <ul class="post-tags">
+        {% for tag in post.tags %}
+          {% capture tagURL %}/tag/{{ tag }}{% endcapture %}
+          <li>
+            <a href="{{tagURL | absolute_url}}">#{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% comment %}
+    {% if site.showSharePost %}
+    <div class="post-share-test">
+    <span>Share</span>
+
+    <ul class="social-networks">
+    <li>
+    <a
+    href="https://facebook.com/sharer.php?u={{page.url | absolute_url}}"
+    rel="nofollow"
+    target="_blank">
+    <svg width="16" height="16">
+    <use href={{"/assets/images/social-icons.svg#facebook" | absolute_url}}></use>
+    </svg>
+    </a>
+    </li>
+    <li>
+    <a
+    href="http://twitter.com/share?url={{page.url | absolute_url | escape}}&text={{post.content | strip_html | strip | truncate: 130}}&via={{site.twitterHandle}}"
+    rel="nofollow"
+    target="_blank">
+    <svg width="16" height="16">
+    <use href={{"/assets/images/social-icons.svg#twitter" | absolute_url}}></use>
+    </svg>
+    </a>
+    </li>
+    </ul>
+    </div>
+    {% endif %}
+    {% endcomment %}
+  </div>
+
+  {% if site.showComments and post.comments %}
+    {% include components/comments.html %}
+  {% endif %}
+
+  {% if site.showMoreStories and site.posts.size > site.moreStoriesLimit and site.posts.size >= 4 %}
+    {% include components/moreStories.html %}
+  {% endif %}
+
+  <div class="go-home">
+    <a class="" href="{{'/' | absolute_url}}">
+      <img
+        src={{"/assets/images/logo.png" | absolute_url}}
+        width="50"
+        height="50"
+        alt="Logo" />
+    </a>
+  </div>
+</article>

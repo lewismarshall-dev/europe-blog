@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section id="posts" class="post-list">
+  {% for post in paginator.posts %}
+    {% include components/postCompact.html %}
+  {% endfor %}
+</section>
+
+{% if paginator.total_pages > 1 %}
+  <nav class="pagination">
+    <div>
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}#posts" class="newer-posts">&larr; Newer Posts</a>
+      {% endif %}
+    </div>
+    <div>
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}#posts" class="older-posts">Older Posts &rarr;</a>
+      {% endif %}
+    </div>
+  </nav>
+{% endif %}

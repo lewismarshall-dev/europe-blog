@@ -1,0 +1,17 @@
+<time class="post-date">      
+      {% if post.dateend and post.dateend != "" %}
+
+        {% assign dateMonth = post.date | date: '%B' %}
+        {% assign dateendMonth = post.dateend | date: '%B' %}
+        {% if dateMonth == dateendMonth %}
+        {% assign d = post.dateend | date: "%e" %}
+        {% assign dateendFormat = d | remove: " " %}
+          {{ post.date | date: "%B %e" }}-{{ dateendFormat  }}{{ post.dateend | date: ", %Y" }}</time>
+        {% else %}
+          {{ post.date | date: "%B %e " }}-{{ post.dateend | date: " %B %e, %Y" }}</time>
+        {% endif %}
+      {% else %}
+      {{ post.date | date: "%B %e, %Y" }}
+      {% endif %}
+    </time>
+    

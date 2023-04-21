@@ -1,0 +1,20 @@
+<aside class="site-about">
+  <div class="authors-intro">
+    <img
+      src={{"/assets/images/lewis.jpeg" | absolute_url}}
+      width="70"
+      height="70"
+      alt="Author 1" />
+    {% unless !site.useSingleAuthor %}
+      <svg width="36" height="36">
+        <use href={{"/assets/images/other-icons.svg#ampersand" | absolute_url}}></use>
+      </svg>
+      <img
+        src={{"/assets/images/thomas.jpeg" | absolute_url}}
+        width="70"
+        height="70"
+        alt="Author 2" />
+    {% endunless %}
+  </div>
+  <p class="authors-copy">{{ site.about }}</p>
+</aside>

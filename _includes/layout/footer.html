@@ -1,0 +1,61 @@
+<footer class="site-footer">
+  <ul>
+    {% if site.facebook.active %}
+      <li>
+        <a
+          href="{{site.facebook.url}}"
+          rel="noreferrer"
+          target="_blank">
+          <svg width="16" height="16">
+            <use href={{"/assets/images/social-icons.svg#facebook" | absolute_url}}></use>
+          </svg>
+        </a>
+      </li>
+    {% endif %}
+
+    {% if site.twitter.active %}
+      <li>
+        <a
+          href="{{site.twitter.url}}"
+          rel="noreferrer"
+          target="_blank">
+          <svg width="16" height="16">
+            <use href={{"/assets/images/social-icons.svg#twitter" | absolute_url}}></use>
+          </svg>
+        </a>
+      </li>
+    {% endif %}
+
+    {% if site.instagram.active %}
+      <li>
+        <a
+          href="{{site.instagram.url}}"
+          rel="noreferrer"
+          target="_blank">
+          <svg width="16" height="16">
+            <use href={{"/assets/images/social-icons.svg#instagram" | absolute_url}}></use>
+          </svg>
+        </a>
+      </li>
+    {% endif %}
+
+    {% if site.email.active %}
+      <li>
+        {% if site.useExternalContactForm %}
+          <span class="open-contact">
+            <svg width="16" height="16">
+              <use href={{"/assets/images/social-icons.svg#email" | absolute_url}}></use>
+            </svg>
+          </a>
+        {% else %}
+          <a href="mailto:{{site.email.address}}">
+            <svg width="16" height="16">
+              <use href={{"/assets/images/social-icons.svg#email" | absolute_url}}></use>
+            </svg>
+          </a>
+        {% endif %}
+      </li>
+    {% endif %}
+  </ul>
+  <p>{{ site.author }} &copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+</footer>
