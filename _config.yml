@@ -6,12 +6,13 @@ author: 'Lewis Marshall'
 
 # Paths
 baseurl: 'https://lewismarshall-dev.github.io/repositoryname'
+#baseurl:
 url: ''
 
 # Options
 darkMode: true
 showTags: true
-showSearch: true
+showSearch: false
 showSharePost: true
 showFavIcon: true
 showComments: false

@@ -21,7 +21,15 @@
 }
 
 .grid-4 {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 351px) {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+
+  @media screen and (min-width: 1212px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   @media screen and (min-width: 1212px) {
     grid-template-columns: repeat(4, minmax(240px, 1fr));
@@ -29,7 +37,11 @@
 }
 
 .grid-4 .post-compact > a {
-  min-height: 262.5px;
+  min-height: 175px;
+
+  @media screen and (min-width: 511px) {
+    min-height: 262.5px;
+  }
 }
 
 .post-lists-title {

@@ -368,9 +368,19 @@
       padding: 0;
       max-width: var(--max-post-width);
 
-      // @media screen and (min-width: 1212px) {
-      //   grid-template-columns: repeat(4, minmax(240px, 1fr));
-      // }
+      @media screen and (max-width: 800px) {
+        max-width: none;
+        padding: 0 10px;
+      }
+    }
+    @media screen and (min-width: 351px) and (max-width: 510px) {
+      .post-title {
+        font-size: 25px;
+      }
+
+      .post-date {
+        display: none;
+      }
     }
   }
 
