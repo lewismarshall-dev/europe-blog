@@ -1,9 +1,9 @@
 ---
-cover: http://joro.me/demo-assets/jekyll/happycrossroads/maldives-cover.webp
-title: 'Maldives'
-date: 2022-06-01
-dateend: 2022-06-25
-tags: maldives summer vacation spain
+cover: /assets/images/cover/A.jpg
+title: 'Amsterdam'
+date: 2023-05-06
+dateend: 2023-05-09
+tags: netherlands
 ---
 
 <div markdown="1" class="row-text">

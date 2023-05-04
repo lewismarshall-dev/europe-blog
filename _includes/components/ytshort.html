@@ -1,0 +1,8 @@
+{% assign a = include.src | replace: '/shorts/', '/embed/' %}
+{% assign b = a | replace: '/www.youtube.com', '/www.youtube-nocookie.com' %}
+
+{% capture ytShortUrl %}
+  {{ b }}?modestbranding=1&rel=0&iv_load_policy=3&fs=0&color=white&controls=0
+{% endcapture %}
+
+<iframe src="{{ytShortUrl}}" frameborder="0"></iframe>
